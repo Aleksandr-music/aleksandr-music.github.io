@@ -46,8 +46,8 @@
       width: 24px;
       height: 24px;
       cursor: pointer;
-      filter: brightness(0); /* делает иконки чёрными */
       transition: transform 0.3s;
+      filter: brightness(0); /* делаем иконки чёрными */
     }
 
     header .socials img:hover {
@@ -71,8 +71,8 @@
       position: absolute;
       right: 60px;
       top: 150px;
-      width: 180px;
-      height: 180px;
+      width: 260px; /* ~7 см */
+      height: 260px;
       border-radius: 50%;
       border: 4px solid white;
       object-fit: cover;
@@ -95,6 +95,24 @@
     #songs h2 {
       font-size: 32px;
       margin-bottom: 20px;
+    }
+
+    /* Раздел About Me */
+    #about {
+      padding: 60px 20px;
+      background: #fafafa;
+      max-width: 800px;
+      margin: auto;
+    }
+    #about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #about p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
     }
 
     /* Раздел Contact */
@@ -195,11 +213,11 @@
     <a href="#contact" class="nav-item">Contact</a>
 
     <div class="socials">
-      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-      <a href="https://youtube.com" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://m.youtube.com/@alexaigeneration?fbclid=PAQ0xDSwL9mp5leHRuA2FlbQIxMAABp3pjRtUuiYPSOtonnJto6A3rZ_9ifSWGLK0-LczcZ6lgzm4P1Oxzrv8l0Nwt_aem_U7bZG7_3fzbzU4F6Fz96PQ" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
       <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
     </div>
   </header>
 
@@ -216,6 +234,17 @@
       <source src="mysong.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am <b>Aleksandr Bakanov</b>, songwriter and lyricist. <br>
+      My works reflect deep emotions, human experiences, and timeless inspiration. <br>
+      All of my creative works are officially registered with <br>
+      <b>ISNI: 0000 0005 2799 679X</b>.
+    </p>
   </section>
 
   <!-- Contact -->
@@ -241,16 +270,17 @@
   <!-- Footer -->
   <footer>
     <div class="footer-socials">
-      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-      <a href="https://youtube.com" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://m.youtube.com/@alexaigeneration?fbclid=PAQ0xDSwL9mp5leHRuA2FlbQIxMAABp3pjRtUuiYPSOtonnJto6A3rZ_9ifSWGLK0-LczcZ6lgzm4P1Oxzrv8l0Nwt_aem_U7bZG7_3fzbzU4F6Fz96PQ" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
       <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
     </div>
     <p>
       © 2025 Aleksandr Bakanov. All Rights Reserved. <br>
       Unauthorized copying, reproduction, or distribution of this site’s content is strictly prohibited. <br>
-      Developed and maintained by Aleksandr Bakanov.
+      Developed and maintained by Aleksandr Bakanov. <br>
+      ISNI: 0000 0005 2799 679X
     </p>
   </footer>
 
