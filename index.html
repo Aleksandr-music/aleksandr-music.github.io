@@ -3,241 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleksandr Bakanov - Official Website</title>
-  <!-- Font Awesome для иконок -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Aleksandr Bakanov</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      height: 100%;
-      color: #fff;
+      color: #333;
+      background: #fff;
+      overflow-x: hidden;
     }
 
-    /* Верхняя панель */
-    .site-header {
-      width: 100%;
-      height: 60px;
-      background: #f5f5dc; /* кремовый */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 30px;
+    /* Шапка сайта */
+    header {
       position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
       z-index: 1000;
     }
-
-    .menu {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .menu a {
-      color: #000;
+    nav a {
+      margin: 0 10px;
       text-decoration: none;
+      color: #333;
       font-weight: bold;
     }
+    nav a:hover {
+      color: #e63946;
+    }
 
-    .header-icons {
+    /* Соцсети в шапке */
+    .nav-socials {
       display: flex;
-      gap: 20px;
-      margin-right: 80px; /* сдвигаем ближе к центру */
+      gap: 15px;
+      position: absolute;
+      right: 80px; /* смещено ближе к центру */
+      top: 18px;
+    }
+    .nav-socials img {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .nav-socials img:hover {
+      transform: scale(1.2);
     }
 
-    .header-icons a {
-      color: #000;
-      font-size: 1.6em;
-      transition: color 0.3s;
-    }
-
-    .header-icons a:hover {
-      color: #555;
-    }
-
-    /* Главный блок */
+    /* Главный экран */
     .hero {
       position: relative;
       height: 100vh;
-      background: url('mountains.jpg') no-repeat center center;
-      background-size: contain;
+      background: url('mountains.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 100px 50px 50px 50px;
+      justify-content: flex-start;
+      padding-left: 60px;
+      text-align: left;
     }
 
-    /* Цитата */
-    .quote {
-      font-size: 5em;
-      font-family: "Brush Script MT", cursive;
-      font-style: italic;
-      line-height: 1.3em;
-    }
-
-    /* Фото */
+    /* Фото лица */
     .profile-pic {
-      width: 300px;
-      height: 300px;
+      position: absolute;
+      right: 60px;
+      top: 120px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid #fff;
-    }
-
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
+      border: 4px solid white;
       object-fit: cover;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
     }
 
-    /* About и Songs */
-    #about, #songs, #contact {
+    /* Слова Dream Create Inspire */
+    .hero-text {
+      font-size: 60px;
+      font-family: 'Satisfy', cursive;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      margin-top: 50px;
+    }
+
+    /* Раздел Contact */
+    #contact {
       padding: 80px 20px;
+      background: #f9f9f9;
       text-align: center;
-      background: #111;
     }
-
-    #about h2, #songs h2, #contact h2 {
-      font-size: 2em;
+    #contact h2 {
+      font-size: 32px;
       margin-bottom: 20px;
-      color: #f5f5dc;
+      font-family: 'Arial', sans-serif;
+      color: #333;
     }
-
-    #about p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
+    #contact p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
     }
-
-    /* Songs */
-    audio {
-      width: 80%;
-      max-width: 500px;
-      margin-top: 20px;
-    }
-
-    /* Contact form */
-    form {
+    #contact form {
       max-width: 600px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      text-align: left;
     }
-
-    input, textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    button {
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      background: #f5f5dc;
-      color: #000;
+    #contact label {
+      display: block;
+      margin-bottom: 10px;
       font-weight: bold;
+      color: #333;
+    }
+    #contact input, 
+    #contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    #contact textarea {
+      height: 150px;
+    }
+    #contact button {
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s;
+      margin-top: 15px;
+    }
+    #contact button:hover {
+      background: #c32f3b;
     }
 
-    button:hover {
-      background: #ddd;
-    }
-
-    /* Footer */
+    /* Футер с соцсетями */
     footer {
+      background: #111;
+      padding: 30px 0;
       text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
-      font-size: 0.9em;
+      margin-top: 50px;
+    }
+    footer .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .footer-socials img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    footer .footer-socials img:hover {
+      transform: scale(1.2);
+    }
+    footer p {
+      color: #aaa;
+      margin-top: 15px;
+      font-size: 14px;
     }
   </style>
+  <!-- Подключаем шрифт Satisfy -->
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="menu">
-      <a href="#home">Aleksandr Bakanov</a>
-      <a href="#home">Home</a>
-      <a href="#songs">My Songs</a>
-      <a href="#about">About Me</a>
-      <a href="#projects">My Projects</a>
-      <a href="#shop">Shop</a>
-      <a href="#gallery">Gallery</a>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="logo"><strong>Aleksandr Bakanov</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Songs</a>
+      <a href="#">About Me</a>
+      <a href="#">My Projects</a>
+      <a href="#">Shop</a>
+      <a href="#">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="header-icons">
-      <a href="https://www.instagram.com/alexaigeneration" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://m.youtube.com/@alexaigeneration" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://spotify.com/" target="_blank"><i class="fab fa-spotify"></i></a>
-      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="nav-socials">
+      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://youtube.com" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="quote">
-      Dream,<br>
-      Create,<br>
-      Inspire
-    </div>
-    <div class="profile-pic">
-      <img src="face.png" alt="Aleksandr Bakanov">
-    </div>
-  </section>
+  <!-- Главный экран -->
+  <div class="hero">
+    <h1 class="hero-text">Dream,<br>Create,<br>Inspire</h1>
+    <img src="myphoto.jpg" alt="Profile Photo" class="profile-pic">
+  </div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am <strong>Aleksandr Bakanov</strong>, songwriter and lyricist.<br><br>
-      My works reflect deep emotions, human experiences, and timeless inspiration.<br><br>
-      All of my creative works are officially registered with 
-      <strong>ISNI: 0000 0005 2799 679X</strong>.
-    </p>
-  </section>
-
-  <!-- SONGS -->
-  <section id="songs">
-    <h2>My Songs</h2>
-    <p><strong>You Are Always With Me</strong></p>
-    <audio controls>
-      <source src="songs/YouAreAlwaysWithMe.wav" type="audio/wav">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+    <p>Напишите мне сообщение, и я обязательно отвечу.</p>
+
+    <form action="https://formspree.io/f/mnnzbebr" method="POST">
+      <label>
+        Ваш Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Сообщение:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Отправить</button>
     </form>
-    <p style="margin-top:15px; font-size:0.9em; color:#ccc;">
-      Messages will be sent directly to: aleksandrbakanoff@gmail.com
-    </p>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    © 2025 AB — All Rights Reserved <br>
-    ISNI: 0000 0005 2799 679X
+    <div class="footer-socials">
+      <a href="https://instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://youtube.com" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
+    </div>
+    <p>© 2025 Aleksandr Bakanov</p>
   </footer>
 
 </body>
