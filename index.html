@@ -5,25 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aleksandr Bakanov - Official Website</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      height: 100%;
       color: #fff;
     }
 
-    /* HEADER */
+    /* Фон */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+    }
+
+    /* Цитата */
+    .quote {
+      font-size: 2.5em;
+      font-style: italic;
+      max-width: 400px;
+    }
+
+    /* Фото */
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Навигация */
     .site-header {
+      position: absolute;
+      top: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.5);
       padding: 15px 0;
     }
 
     .logo h1 {
-      font-size: 1.5em;
+      font-size: 1.2em;
       margin-left: 40px;
       color: #fff;
     }
@@ -48,13 +85,13 @@
       display: flex;
       justify-content: flex-end;
       gap: 20px;
-      padding-right: 60px; /* отступ внутрь */
+      padding-right: 60px; /* отступ от правого края */
       align-items: center;
     }
 
     .header-icons img {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       transition: transform 0.2s ease;
     }
 
@@ -62,28 +99,14 @@
       transform: scale(1.2);
     }
 
-    /* MAIN QUOTE */
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    /* ABOUT */
-    #about {
-      text-align: center;
+    /* Блок About */
+    #about, #songs {
       padding: 60px 20px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 15px;
-      max-width: 800px;
-      margin: 50px auto;
+      text-align: center;
+      background: #111;
     }
 
-    #about h2 {
+    #about h2, #songs h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
@@ -91,26 +114,18 @@
     #about p {
       font-size: 1.2em;
       line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    /* SONGS */
-    #songs {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    #songs h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
+    /* Песни */
     audio {
       width: 80%;
       max-width: 500px;
       margin-top: 20px;
     }
 
-    /* FOOTER */
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -144,12 +159,19 @@
     </div>
   </header>
 
-  <!-- MAIN QUOTE -->
+  <!-- HERO SECTION -->
   <section class="hero" id="home">
-    <h2>Dream, Create, Inspire</h2>
+    <div class="quote">
+      Dream,<br>
+      Create,<br>
+      Inspire
+    </div>
+    <div class="profile-pic">
+      <img src="images/profile.jpg" alt="Aleksandr Bakanov">
+    </div>
   </section>
 
-  <!-- ABOUT ME -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
     <p>
