@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aleksandr Bakanov - Official Website</title>
+  <!-- Подключаем Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body, html {
       margin: 0;
@@ -17,7 +19,7 @@
     .hero {
       position: relative;
       height: 100vh;
-      background: url('images/background.jpg') no-repeat center center fixed;
+      background: url('mountains.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       align-items: center;
@@ -89,14 +91,14 @@
       align-items: center;
     }
 
-    .header-icons img {
-      width: 26px;
-      height: 26px;
-      transition: transform 0.2s ease;
+    .header-icons a {
+      color: #fff;
+      font-size: 1.4em;
+      transition: color 0.3s;
     }
 
-    .header-icons img:hover {
-      transform: scale(1.2);
+    .header-icons a:hover {
+      color: #f39c12;
     }
 
     /* Блок About */
@@ -150,12 +152,8 @@
       <a href="#gallery">Gallery</a>
     </nav>
     <div class="header-icons">
-      <a href="https://instagram.com/" target="_blank">
-        <img src="icons/instagram.svg" alt="Instagram" />
-      </a>
-      <a href="https://youtube.com/" target="_blank">
-        <img src="icons/youtube.svg" alt="YouTube" />
-      </a>
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
   </header>
 
@@ -167,7 +165,7 @@
       Inspire
     </div>
     <div class="profile-pic">
-      <img src="images/profile.jpg" alt="Aleksandr Bakanov">
+      <img src="face.png" alt="Aleksandr Bakanov">
     </div>
   </section>
 
@@ -198,4 +196,4 @@
   </footer>
 
 </body>
-</html>
+</html> 
