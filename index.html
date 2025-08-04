@@ -17,7 +17,7 @@
     header {
       width: 100%;
       height: 2cm;
-      background: #f5f5dc; /* кремовый цвет */
+      background: #f5f5dc; /* кремовый */
       display: flex;
       align-items: center;
       padding: 0 20px;
@@ -42,19 +42,19 @@
       gap: 15px;
     }
 
-    header .socials img {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
+    header .socials svg {
+      width: 26px;
+      height: 26px;
+      fill: #000; /* чёрный */
       transition: transform 0.3s;
-      filter: brightness(0); /* делаем иконки чёрными */
     }
 
-    header .socials img:hover {
+    header .socials svg:hover {
       transform: scale(1.2);
+      fill: #e63946; /* подсветка при наведении */
     }
 
-    /* Главный экран */
+    /* Hero */
     .hero {
       position: relative;
       height: 100vh;
@@ -87,7 +87,7 @@
       text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
     }
 
-    /* Раздел My Songs */
+    /* My Songs */
     #songs {
       padding: 60px 20px;
       text-align: center;
@@ -97,7 +97,7 @@
       margin-bottom: 20px;
     }
 
-    /* Раздел About Me */
+    /* About Me */
     #about {
       padding: 60px 20px;
       background: #fafafa;
@@ -115,7 +115,7 @@
       text-align: center;
     }
 
-    /* Раздел Contact */
+    /* Contact */
     #contact {
       padding: 80px 20px;
       background: #f9f9f9;
@@ -167,7 +167,7 @@
       background: #c32f3b;
     }
 
-    /* Футер */
+    /* Footer */
     footer {
       background: #111;
       padding: 30px 0;
@@ -179,15 +179,15 @@
       justify-content: center;
       gap: 20px;
     }
-    footer .footer-socials img {
+    footer .footer-socials svg {
       width: 30px;
       height: 30px;
-      cursor: pointer;
-      filter: brightness(0); /* чёрные иконки */
+      fill: #fff; /* белые иконки */
       transition: transform 0.3s;
     }
-    footer .footer-socials img:hover {
+    footer .footer-socials svg:hover {
       transform: scale(1.2);
+      fill: #e63946;
     }
     footer p {
       color: #aaa;
@@ -196,7 +196,7 @@
       line-height: 1.6;
     }
   </style>
-  <!-- Подключаем шрифт Satisfy -->
+  <!-- Шрифт Satisfy -->
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -213,11 +213,26 @@
     <a href="#contact" class="nav-item">Contact</a>
 
     <div class="socials">
-      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-      <a href="https://m.youtube.com/@alexaigeneration?fbclid=PAQ0xDSwL9mp5leHRuA2FlbQIxMAABp3pjRtUuiYPSOtonnJto6A3rZ_9ifSWGLK0-LczcZ6lgzm4P1Oxzrv8l0Nwt_aem_U7bZG7_3fzbzU4F6Fz96PQ" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
-      <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank">
+        <!-- Instagram -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+      </a>
+      <a href="https://m.youtube.com/@alexaigeneration" target="_blank">
+        <!-- YouTube -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C16.4 5 12 5 12 5h0s-4.4 0-6.9.1c-.4 0-1.3 0-2.1.9-.6.6-.8 2-.8 2S2 9.6 2 11.3v1.5c0 1.7.2 3.3.2 3.3s.2 1.4.8 2c.8.8 1.9.8 2.4.9 1.8.1 7.6.1 7.6.1s4.4 0 6.9-.1c.4 0 1.3 0 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.7-.2-3.3-.2-3.3zM10 14.7v-5.4l5.2 2.7-5.2 2.7z"/></svg>
+      </a>
+      <a href="https://spotify.com" target="_blank">
+        <!-- Spotify -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0zm5.4 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1.1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-.9 7.4-.5 10.2 1.3.3.2.4.6.4.8zm1.3-3c-.3.4-.8.5-1.2.2-2.8-1.7-7-2.2-10.2-1.2-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 3.8-1.2 8.5-.7 11.7 1.4.4.2.5.8.2 1.1zm.1-3.2c-3.3-2-8.7-2.2-11.9-1.2-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 3.8-1.1 9.8-.9 13.5 1.4.5.3.6 1 .3 1.5-.3.3-.9.5-1.2.2z"/></svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <!-- LinkedIn -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7.1 20.5H3.6V9h3.5v11.5zM5.4 7.5c-1.1 0-2-.9-2-2s.9-2 2-2c1.2 0 2.1.9 2.1 2s-.9 2-2.1 2zM20.5 20.5h-3.5v-5.6c0-1.3-.5-2.2-1.6-2.2-.9 0-1.4.6-1.7 1.1-.1.2-.1.5-.1.8v5.9h-3.5V9h3.5v1.6c.5-.7 1.2-1.6 3-1.6 2.2 0 3.9 1.5 3.9 4.7v6.8z"/></svg>
+      </a>
+      <a href="https://facebook.com" target="_blank">
+        <!-- Facebook -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z"/></svg>
+      </a>
     </div>
   </header>
 
@@ -270,19 +285,6 @@
   <!-- Footer -->
   <footer>
     <div class="footer-socials">
-      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-      <a href="https://m.youtube.com/@alexaigeneration?fbclid=PAQ0xDSwL9mp5leHRuA2FlbQIxMAABp3pjRtUuiYPSOtonnJto6A3rZ_9ifSWGLK0-LczcZ6lgzm4P1Oxzrv8l0Nwt_aem_U7bZG7_3fzbzU4F6Fz96PQ" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
-      <a href="https://spotify.com" target="_blank"><img src="icons/spotify.png" alt="Spotify"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-    </div>
-    <p>
-      © 2025 Aleksandr Bakanov. All Rights Reserved. <br>
-      Unauthorized copying, reproduction, or distribution of this site’s content is strictly prohibited. <br>
-      Developed and maintained by Aleksandr Bakanov. <br>
-      ISNI: 0000 0005 2799 679X
-    </p>
-  </footer>
-
-</body>
-</html>
+      <!-- Повторяем соц. иконки -->
+      <a href="https://www.instagram.com/alexaigeneration?igsh=MTl3NTI1NGx0c2E1bw==" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg></a>
+      <a href="https://m.youtube.com/@alexaigeneration" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C16.4 5 12 5 12
